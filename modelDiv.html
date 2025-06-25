@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      
+        .main{
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+
+
+        }
+        .container{
+            width: 1320px;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+        }
+        button{
+            margin: 20px auto;
+            padding: 10px 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <div class="container">
+       <div class="main">1</div>
+       <div class="main">2</div>
+        <div class="main">3</div>
+        <div class="main">4</div>
+    </div>
+    <button>change color</button>
+    
+</body>
+<script>
+    let btn= document.querySelector("button");
+    let allbox= document.getElementsByClassName("main")
+    // console.log(allbox);
+    
+
+    btn.addEventListener("click",function(){
+        // console.log(allbox[0]);
+        // allbox[0].style.backgroundColor="yellow"
+      for(let items of allbox)   {
+
+        console.log(items);
+        items.style.backgroundColor='pink'
+        // items.style.fontSize='40px'
+        // console.log(items.innerHTML);
+        
+
+
+      } 
+    
+        
+          
+      
+    })
+</script>
+</html>

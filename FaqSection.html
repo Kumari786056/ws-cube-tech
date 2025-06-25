@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        h1{
+            text-align: center;
+            padding: 30px 0px;
+        }
+        .faqMid{
+            max-width: 1000px;
+            margin: auto;
+
+        }
+        .faqItems{
+            border: 1px solid #ccc;
+            margin: 20px;
+
+        }
+        .faqItems h3{
+            padding: 15px;
+            position: relative;
+            background-color: rgb(50, 205, 151);
+            cursor: pointer;
+        }
+        .faqItems h3 span{
+
+            position: absolute;
+            right: 10px;
+        }
+        .faqItems p{
+
+            font-size: 18px;
+            line-height: 30px;
+            padding: 10px;
+            display: none;
+        }
+
+        .showAns{
+            display: block !important;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Frequently Asked Question</h1>
+    <div class="faqMid">
+        <div class="faqItems">
+         <h3>how do i book text with GI Express Texi?<span>+</span> </h3>
+        <p>you can book a text online our easy-to-use booking system or call us directly .we ensure
+        quick and hassle-free booking for all customers.
+      </p>
+        </div>
+
+
+         <div class="faqItems">
+         <h3>what arears do you srver? <span>+</span></h3>
+        <p>we provide texi serveri leicester and cover transform  to manjir  ujk</p>
+        </div>
+
+    </div>
+
+
+     </div>
+
+
+         <div class="faqItems">
+         <h3>what arears do you srver? <span>+</span></h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Accusantium dolores cumque quasi doloribus id placeat!</p>
+        </div>
+
+         <div class="faqItems">
+         <h3>how i can my tesi ? <span>+</span></h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Accusantium dolores cumque quasi doloribus id placeat!</p>
+        </div>
+
+    </div>
+
+
+    
+</body>
+
+<script>
+    let allQuestion= document.querySelectorAll(".faqItems h3")
+    
+    allQuestion.forEach((item,currentIndex)=>{
+     
+
+        item.addEventListener("click",()=>{
+       
+     allQuestion.forEach((heading,i)=>{
+         if (currentIndex!=i) {
+            heading.lastElementChild.innerHTML="+"
+            heading.nextElementSibling.classList.remove('showAns')
+            
+         }
+   })
+
+
+        //current question click -|+ kaam kar rha hai   
+      if (item.lastElementChild.innerHTML=="+") {
+        item.lastElementChild.innerHTML="-"
+      }
+      else{
+        item.lastElementChild.innerHTML="+"
+      }
+           
+
+        //   console.log(item.lastElementChild);
+
+            //current question click show |hide ye kar rha hai
+         item.nextElementSibling.classList.toggle('showAns')
+             
+        }) 
+
+    })
+
+</script>
+</html>

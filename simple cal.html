@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   nun1 <input type="text" class="input" placeholder="inter value1"><br/><br>
+   nun2 <input type="text" class="input"placeholder="inter value 2"> <br/><br>
+
+<button>save</button><br><br>
+   outut  <input type="text" class="input"placeholder="inter value 3"> <br/>
+
+
+    
+</body>
+<script>
+    let btn=document. querySelector("button")
+    let allinput = document.querySelectorAll('.input')
+    // console.log(allinput[0]);
+    btn.addEventListener("click",()=>{
+        
+        // alert("welcome to all")
+        let input1Value=Number(allinput[0].value)
+        ;
+        let input2Value=Number(allinput[1].value)
+        ;
+        // console.log(input1Value,input2Value);
+
+        let output = input1Value+input2Value;
+        // console.log(output);
+        allinput[2].value=output ;
+        allinput[0].value=''
+        allinput[1].value=''
+        
+        })
+    
+</script>
+</html>

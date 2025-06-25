@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .article{
+            height: 200px;
+            width: 300px;
+            background-color: aqua;
+            color: rgb(213, 33, 69);
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <button id="css">class</button>
+    <button id="addclass">add</button>
+    <button id="removeclass">remove</button>
+    <button id="toggle">toggle</button>
+
+    <p>Lorem ipsum, <br>
+        dolor sit amet consectetur adipisicing elit. <br>
+         Eos odit sequi amet esse quam laboriosam!</p>
+    
+</body>
+
+<script>
+    let btn= document.querySelector("#css")
+    let para= document.querySelector("p")
+
+    btn.addEventListener("click",()=>{
+
+    para.style.color="red"
+    para.style.backgroundColor="yellow"
+    })
+
+
+    let btn2= document.querySelector("#addclass")
+    btn2.addEventListener("click",()=>{
+        para.classList.add('article')
+    })
+
+    let btn3= document.querySelector("#removeclass")
+
+    btn3.addEventListener("click",()=>{
+        para.classList.remove('article')
+    })
+
+
+    let btn4= document.querySelector("#toggle")
+
+    btn4.addEventListener("click",()=>{
+        btn4.classList.toggle('article')
+
+        para.classList.toggle('article')
+    })
+
+
+</script>
+</html>

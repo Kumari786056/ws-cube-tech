@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+
+        .main{
+            width: 1320px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h1>welcome</h1>
+        <button>save</button>
+        <p>wecome to <b>to</b><u>ws</u>company</p>
+
+    </div>
+    
+</body>
+
+<script>
+    let btn=document.querySelector("button")
+    btn.addEventListener("click",()=>{
+        // btn.parentElement.remove()
+        btn.parentElement.style.background="yellow"
+        btn.previousElementSibling.style.color="red"
+        btn.previousElementSibling.innerHTML="welcome to ws"
+        btn.nextElementSibling.style.fontSize="40px"
+
+        console.log(btn.nextElementSibling);
+        console.log(btn.nextElementSibling.children);
+
+        btn.nextElementSibling.lastChild
+
+        
+
+
+    })
+</script>
+</html>

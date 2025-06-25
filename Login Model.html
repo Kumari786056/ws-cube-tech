@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .loginmodel{
+
+            width: 30%;
+            height: 100vh;
+            background-color: #ccc;
+            position: fixed;
+            transition: 0.5s;
+            right: -500px;
+            padding: 40px;
+            top: 0px;
+        }
+
+        .loginmodel span{
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .headingmodel{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
+        .headingmodel h3{
+            font-size: 20;
+        }
+
+        .loginmodel form{
+
+            margin-top: 40px;
+        }
+        .loginmodel form label{
+            display: block;
+        }
+
+        .loginmodel form input{
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .loginmodel form button{
+
+            width: 100%;
+            margin-top: 30px;
+            background-color: #194cff;
+            padding: 10px 0px;
+            color: white;
+            border: none;
+            font-size: 20px;
+
+        }
+         .loginmodel form p{
+
+            margin-top: 20px;
+         }
+         .ShowModel{
+
+       right: 0px;
+
+
+         }
+        
+
+    </style>
+</head>
+<body>
+
+     <button id="login">login</button>
+
+
+    <div class="loginmodel">
+        <span>&times;</span>
+        <div class="headingmodel">
+            <h3>login</h3>
+            <p>use email ,instead</p>
+        </div>
+        <form action="">
+            <label for="">mobile number *</label>
+            <input type="text">
+
+            <button>login</button>
+            <p>Don't have an account ?<a href=""> Create an account</a></p>
+        </form>
+    </div>
+   
+    
+</body>
+
+
+<script>
+
+    let loginbtn= document.querySelector("#login")
+    let  closeMedel= document.querySelector(".loginmodel span")
+
+    let loginmodelElement= document.querySelector(".loginmodel")
+
+    loginbtn.addEventListener("click",()=>{
+
+     loginmodelElement.classList.add('ShowModel')   
+
+    })
+    closeMedel.addEventListener("click",()=>{
+
+        loginmodelElement.classList.remove('ShowModel')
+    })
+
+
+</script>
+</html>
